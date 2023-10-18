@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#D8C4EC">
+
+    <TextView
+        android:id="@+id/título"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MI APP"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/explicito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="60dp"/>
+
+    <TextView
+        android:id="@+id/explicito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INTENTS EXPLÍCITOS"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/primero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/título"/>
+
+    <Button
+        android:id="@+id/primero"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:text="Activity 2"
+        android:onClick="irActividad2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explicito"
+        app:layout_constraintBottom_toTopOf="@+id/segundo"/>
+
+    <Button
+        android:id="@+id/segundo"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primero"
+        app:layout_constraintBottom_toTopOf="@+id/implicito"
+        android:text="No hecho"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:id="@+id/implicito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INTENTS IMPLÍCITOS"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/tercero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/segundo"/>
+
+    <Button
+        android:id="@+id/tercero"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:onClick="abrirWeb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/implicito"
+        app:layout_constraintBottom_toTopOf="@id/cuarto"
+        android:text="Tiktok"/>
+
+    <Button
+        android:id="@+id/cuarto"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:onClick="abrirMapa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tercero"
+        app:layout_constraintBottom_toTopOf="@+id/quinto"
+        android:text="Mapa"/>
+
+    <Button
+        android:id="@+id/quinto"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:onClick="mostrarContactos"
+        android:text="Contactos"
+        app:layout_constraintBottom_toTopOf="@+id/sexto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuarto"/>
+
+    <Button
+        android:id="@+id/sexto"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:onClick="abrirCamara"
+        android:text="Cámara"
+        app:layout_constraintBottom_toTopOf="@+id/septimo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quinto"/>
+
+    <Button
+        android:id="@+id/septimo"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:onClick="abrirTelefono"
+        android:text="Teléfono"
+        app:layout_constraintBottom_toTopOf="@+id/octavo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sexto"/>
+
+    <Button
+        android:id="@+id/octavo"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:onClick="enviarSMS"
+        android:text="Mensaje"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/septimo"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

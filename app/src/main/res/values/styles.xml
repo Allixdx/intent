@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define los tamaños de los botones -->
+    <dimen name="ancho">250dp</dimen>
+    <dimen name="alto">50dp</dimen>
+
+</resources>
